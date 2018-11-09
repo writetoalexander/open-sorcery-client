@@ -9,6 +9,10 @@ a {
 	text-decoration: none;
 }
 
+.logout {
+  margin-top: 8rem;
+}
+
 .button {
 	display: inline-block;
 	max-width: 300px;
