@@ -1,6 +1,7 @@
 import React from 'react';
 //import Classes from './Home.css';
-import Logout from './components/Logout';
+//import Logout from './components/Logout';
+import NavBar from './components/NavBar';
 
 class Home extends React.Component {
   constructor(props) {
@@ -12,9 +13,8 @@ class Home extends React.Component {
 
 
   render() {
-    console.log('props in home ', this.props);
     return (
-      <Logout fetchLogout={this.props.fetchLogout}/>
+        <NavBar fetchLogout={this.props.fetchLogout}/>
     )
   }
 }

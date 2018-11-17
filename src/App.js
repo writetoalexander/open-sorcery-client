@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.view === 'logged out') {
+    if (this.state.view === 'logged in') {
       return (
         <div className="App">
           <header className="App-header">
