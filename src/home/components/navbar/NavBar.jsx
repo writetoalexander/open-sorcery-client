@@ -1,6 +1,6 @@
 import React from 'react';
 //import Logout from './Logout';
-
+//testing PR availability
 const NavBar = (props) => {
   return (
     <div className="nav-bar">
