@@ -4,24 +4,27 @@ import './App.css';
 import axios from 'axios'
 import queryString from 'query-string';
 import Home from './home/Home';
+import Tester from './home/components/Tester/Tester.jsx';
 import GitHubLogo from './assets/github.png';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: 'logged out'
+      view: ''
     };
 
   }
   componentWillMount() {
     var query = queryString.parse(this.props.location.search);
     if (query.token) {
+      console.log('query ', query)
       window.localStorage.setItem('jwt', query.token);
       this.props.history.push('/');
+    } else {
       this.setState({
-      view: 'logged in'
-    })
+        view: 'logged in'
+      })
     }
 
   }
@@ -40,7 +43,8 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.view === 'logged in') {
+  
+    if (this.state.view === 'logged out') {
       return (
         <div className="App">
           <header className="App-header">
