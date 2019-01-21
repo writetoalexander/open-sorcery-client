@@ -11,11 +11,11 @@ import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <Provider>
-	<BrowserRouter>
-		<Switch>
-			<Route path="/" component={App} />
-		</Switch>
-  </BrowserRouter>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={App} />
+      </Switch>
+    </BrowserRouter>
   </Provider>,
 	document.getElementById("root")
 );
