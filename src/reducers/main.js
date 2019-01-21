@@ -4,7 +4,7 @@ import repoListAction from '../actions/repoList';
 import currentRepo from './currentRepoReducer';
 
 const rootReducer = combineReducers({
-  repoList: reposlist,
+  repoList: repoList,
   currentRepo: currentRepo
 });
 

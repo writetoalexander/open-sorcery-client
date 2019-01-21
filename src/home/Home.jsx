@@ -1,6 +1,7 @@
 import React from 'react';
-import NavBar from './components/navbar/NavBar';
-import Search from './components/search/Search';
+import NavBar from '../components/navbar/NavBar';
+import Search from '../components/search/Search';
+import RepoListContainer from '../containers/RepoListContainer';
 import axios from 'axios';
 
 
@@ -38,6 +39,7 @@ class Home extends React.Component {
       <div>
         <NavBar fetchLogout={this.props.fetchLogout}/>
         <Search onChange={this.onChange} searchGithubRepos={this.searchGithubRepos}/>
+        <RepoListContainer />
       </div>
     )
   }
