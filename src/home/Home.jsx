@@ -21,7 +21,7 @@ class Home extends React.Component {
     this.setState({
       searchInput: e.target.value
     });
-    //console.log('state is ', this.state.searchInput);
+    console.log('state is ', this.state.searchInput);
   }
 
   async searchGithubRepos () {
@@ -38,7 +38,7 @@ class Home extends React.Component {
     return (
       <div>
         <NavBar fetchLogout={this.props.fetchLogout}/>
-        <Search onChange={this.onChange} searchGithubRepos={this.searchGithubRepos}/>
+        <Search  searchGithubRepos={this.searchGithubRepos}/>
         <RepoListContainer />
       </div>
     )

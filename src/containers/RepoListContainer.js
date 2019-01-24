@@ -13,6 +13,7 @@ const mapDispatchToProps = {
 }
 
 const mapStateToProps = state => {
+  console.log('state is ', state)
   return { repos: state.repoList }
 }
 

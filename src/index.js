@@ -10,7 +10,7 @@ import { Route, Switch } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <Provider store ={store}>
+  <Provider store={store}>
     <BrowserRouter>
       <Switch>
         <Route path="/" component={App} />
