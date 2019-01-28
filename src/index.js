@@ -21,9 +21,3 @@ ReactDOM.render(
 );
 registerServiceWorker();
 
-// ReactDOM.render(
-//   <Provider >
-//     <App />
-//   </Provider>,
-//   document.getElementById('app')	  	
-// );

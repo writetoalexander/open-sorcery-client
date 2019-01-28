@@ -7,7 +7,6 @@ const repoListReducer = (state = data, action) => {
     console.log('actions ')
     return action.repos
   } else {
-    console.log('state is ', state)
     return state
   }
 };

@@ -1,5 +1,6 @@
-import store from './store/store.js';
+import store from '../store/store.js';
 import changeRepoList from '../actions/repoList';
+import axios from 'axios';
 
 const searchGithub = async (query, callback) => {
   let repoResults = await axios.get(`http://localhost:4500/github/search/:${query}`);
