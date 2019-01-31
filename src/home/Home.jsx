@@ -1,6 +1,8 @@
 import React from 'react';
-import NavBar from './components/navbar/NavBar';
-import Search from './components/search/Search';
+import NavBar from '../components/navbar/NavBar';
+//import Search from '../components/search/Search';
+import Search from '../containers/SearchContainer';
+import RepoListContainer from '../containers/RepoListContainer';
 import axios from 'axios';
 
 
@@ -17,10 +19,10 @@ class Home extends React.Component {
   }
 
   onChange(e) {
-    this.setState({
-      searchInput: e.target.value
-    });
-    //console.log('state is ', this.state.searchInput);
+    // this.setState({
+    //   searchInput: e.target.value
+    // });
+    // console.log('state is ', this.state.searchInput);
   }
 
   async searchGithubRepos () {
@@ -37,7 +39,8 @@ class Home extends React.Component {
     return (
       <div>
         <NavBar fetchLogout={this.props.fetchLogout}/>
-        <Search onChange={this.onChange} searchGithubRepos={this.searchGithubRepos}/>
+        <Search />
+        <RepoListContainer />
       </div>
     )
   }
