@@ -1,10 +1,3 @@
-# React-Node.js-Passport-Server
-
-Integrate Google sign-in for registration or login purpose in your React application (bootstrapped using [Create React App](https://github.com/facebookincubator/create-react-app)).
-
-#### Note: Node.js server application for this client can be found @ [React-Node.js-Passport-Server](https://github.com/balasubramanim/react-nodejs-passport-server). Install the server app after completing below steps.
-
-### Prerequisites
 
 #### Dependencies
 
