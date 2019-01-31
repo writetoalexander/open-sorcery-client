@@ -52,7 +52,7 @@ class App extends Component {
             <h1 className="App-title">Welcome to React</h1>
           </header>
           <a href="http://localhost:4500/auth/github">
-          <img className="Git-logo"src={GitHubLogo} alt="GitHubLogo"></img>
+            <img className="Git-logo"src={GitHubLogo} alt="GitHubLogo"></img>
           </a>
         </div>
       )
