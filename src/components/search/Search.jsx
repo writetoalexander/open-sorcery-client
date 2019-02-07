@@ -5,10 +5,6 @@ import store from '../../store/store';
 const Search = (props) => {
   console.log('state inside search', store.getState())
   return (
-    // <div className="repo-search">
-    //   <input onChange={props.onChange}></input>
-    //   <button id="search-button" onClick={props.searchGithubRepos}>Search Repos</button>
-    // </div>
     <form >
       <div>
         <div>

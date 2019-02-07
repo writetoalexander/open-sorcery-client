@@ -10,9 +10,10 @@ import GitHubLogo from './assets/github.png';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      view: ''
-    };
+    // this.state = {
+    //   view: ''
+    // };
+    this.fetchLogout = this.fetchLogout.bind(this);
 
   }
   componentWillMount() {
@@ -58,7 +59,7 @@ class App extends Component {
       )
     } else {
       return (
-        <Home fetchLogout={this.fetchLogout.bind(this)}/>
+        <Home fetchLogout={this.fetchLogout}/>
       )
     }
 
