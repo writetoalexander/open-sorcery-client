@@ -1,5 +1,4 @@
 import React from 'react';
-//import Logout from './Logout';
 
 const NavBar = (props) => {
   return (
@@ -9,14 +8,12 @@ const NavBar = (props) => {
         </button>
       </div>
       <div className="routes-container">
-         <button className="button">assigned</button>
-         <button className="button">watched</button>
-         <button className="button">notifications</button>
-
+        <button className="button">assigned</button>
+        <button className="button">watched</button>
+        <button className="button">notifications</button>
       </div>
     </div>
   )
 };
-
 
 export default NavBar;

@@ -6,46 +6,40 @@ import queryString from 'query-string';
 import Home from './home/Home';
 import Tester from './home/components/Tester/Tester.jsx';
 import GitHubLogo from './assets/github.png';
+import store from './store/store';
+import changeView from './actions/view';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   view: ''
-    // };
     this.fetchLogout = this.fetchLogout.bind(this);
-
   }
   componentWillMount() {
-    var query = queryString.parse(this.props.location.search);
+    let query = queryString.parse(this.props.location.search);
     if (query.token) {
-      console.log('query ', query)
       window.localStorage.setItem('jwt', query.token);
       this.props.history.push('/');
+      store.dispatch(changeView('logged in'));
+    } else if (localStorage.getItem('jwt')) {
+      store.dispatch(changeView('logged in'));   
     } else {
-      this.setState({
-        view: 'logged in'
-      })
+      store.dispatch(changeView('logged out'))
     }
-
   }
 
   fetchLogout() {
-    console.log('logout clicking');
     axios.get('http://localhost:4500/logout').then((response) => {
       console.log('response is ', response);
     })
     .catch((err) => {
       console.log('err logging out ', err);
+      return;
     })
-    this.setState({
-      view: 'logged out'
-    });
+    store.dispatch(changeView('logged out'));
   }
 
-  render() {
-  
-    if (this.state.view === 'logged out') {
+  render() {  
+    if (store.getState().view === 'logged out') {
       return (
         <div className="App">
           <header className="App-header">
@@ -62,7 +56,6 @@ class App extends Component {
         <Home fetchLogout={this.fetchLogout}/>
       )
     }
-
   }
 }
 

@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import store from '../../store/store';
 
 const Search = (props) => {
-  console.log('state inside search', store.getState())
+  console.log('state inside search', store.getState());
   return (
     <form >
       <div>
@@ -18,16 +18,12 @@ const Search = (props) => {
       </div>
       <button  type="button" onClick={
         () => {
-        //console.log('store.getState.form yields ', store.getState().form) ; 
-        let query = store.getState().form.simple.values.firstName
-        //console.log('query is ', query);
-
-        props.handleActionSearch(query);
-      }
+          let query = store.getState().form.simple.values.firstName;
+          props.handleActionSearch(query);
+        }
       }>submit
       </button>
-      </form>
-      
+    </form>      
   )
 };
 
